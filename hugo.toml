@@ -1,4 +1,4 @@
 baseURL = 'https://dan-oak.dev/'
 languageCode = 'en-gb'
 title = 'Dan Oak - Software Engineer'
-theme = 'PaperMod'
+theme = 'papermod'
