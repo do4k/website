@@ -1,5 +1,5 @@
 ---
-title: "CSharp Plays Bejeweled Blitz | Dan Oak - Software Engineer"
+title: "C# Plays Bejeweled Blitz | Dan Oak - Software Engineer"
 date: "2015-12-25T11:49:46-07:00"
 author: "Dan Oak"
 description: "How to use C# to play Bejeweled Blitz"
@@ -9,14 +9,12 @@ ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
 cover:
-    image: "./grid-1.png" # image path/url
+    image: "grid-1.png" # image path/url
     alt: "C# Plays Bejeweld Blitz" # alt text
     caption: "C# Plays Bejeweld Blitz" # display caption under cover
     relative: true # when using page bundles set this to true
-    hidden: true # only hide on current single page
+    hidden: false # only hide on current single page
 ---
-
-# C# Plays Bejeweled Blitz
 
 {{< youtube LyR10G9UCzM >}}
 

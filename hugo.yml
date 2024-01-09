@@ -1,0 +1,29 @@
+baseURL: https://dan-oak.dev/
+title: Dan Oak - Software Engineer
+theme: papermod
+languageCode: en-gb
+params:
+  env: production
+  profileMode:
+    enabled: true
+    title: "Hey! I'm Dan 👋"
+    subtitle: "This is my corner of the internet where I ramble about coding things"
+    imageUrl: "https://pbs.twimg.com/profile_images/1441429199667884032/r2i64yDB_400x400.jpg"
+    imageTitle: "Dan Oak"
+    imageWidth: 200 
+    imageHeight: 200 
+    buttons: 
+      - name: Blog
+        url: "/blog/"
+
+  socialIcons:
+    - name: Twitter
+      url: "https://twitter.com/CoderDan"
+    - name: Github
+      url: "https://github.com/DanDecrypted"
+    - name: LinkedIn
+      url: "https://linkedin.com/in/coderdanuk"
+  
+  homeInfoParams:
+    Title: Hey! I'm Dan 👋
+    Content: This is my corner of the internet where I ramble about coding things
