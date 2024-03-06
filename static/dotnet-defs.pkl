@@ -1,3 +1,5 @@
+module dotnet
+
 typealias LogLevelValues = "Trace"|"Debug"|"Information"|"Warning"|"Error"
 
 class LogLevelConfig {
