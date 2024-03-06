@@ -1,0 +1,15 @@
+typealias LogLevelValues = "Trace"|"Debug"|"Information"|"Warning"|"Error"
+
+class LogLevelConfig {
+	Default: LogLevelValues
+	`Microsoft.AspNetCore`: LogLevelValues
+}
+
+class LoggingConfig {
+	LogLevel: LogLevelConfig
+}
+
+class ServiceBusConfig {
+	ConnectionString: String
+	SubscriptionTTL: String = "02:00:00"
+}
