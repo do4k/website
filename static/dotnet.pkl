@@ -8,7 +8,7 @@ class LogLevel {
 }
 
 class Logging {
-	LogLevel: LogLevelConfig
+	LogLevel: LogLevel
 }
 
 class ServiceBus {
