@@ -8,7 +8,7 @@ params:
     enabled: true
     title: "Hey! I'm Dan 👋"
     subtitle: "This is my corner of the internet where I ramble about coding things"
-    imageUrl: "https://pbs.twimg.com/profile_images/1441429199667884032/r2i64yDB_400x400.jpg"
+    imageUrl: "https://dan-oak.dev/profile-picture.jpg"
     imageTitle: "Dan Oak"
     imageWidth: 200 
     imageHeight: 200 
