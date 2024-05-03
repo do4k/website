@@ -20,11 +20,11 @@ params:
 
   socialIcons:
     - name: Twitter
-      url: "https://twitter.com/CoderDan"
+      url: "https://twitter.com/MrDanOak"
     - name: Github
-      url: "https://github.com/DanDecrypted"
+      url: "https://github.com/MrDanOak"
     - name: LinkedIn
-      url: "https://linkedin.com/in/coderdanuk"
+      url: "https://www.linkedin.com/in/danoak/"
   
   homeInfoParams:
     Title: Hey! I'm Dan 👋
