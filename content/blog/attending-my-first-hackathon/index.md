@@ -9,7 +9,7 @@ ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
 cover:
-    image: "fig6-trophy.webcp" # image path/url
+    image: "fig6-trophy.webp" # image path/url
     alt: "IBM Hackathon Winning" # alt text
     caption: "Attending my first Hackathon" # display caption under cover
     relative: true # when using page bundles set this to true
@@ -24,7 +24,7 @@ From what I understood over the weekend, a blockchain network is essentially a d
 
 This kind of technology is really useful for things such as supply chains. For example say you wanted to verify that some meat you bought had come from a legit butcher who doesn’t deal with halal or anything like that, you can follow the transactions of that particular piece of meat from farm to butcher on a trusted network, which you know hasn’t been modified or changed because it’s impossible to do so, because of the way the network has been set up and the various different consensus models and verifiers which can quarantine any malicious activity.
 
-{{< figure src="./fig1-architecture.webcp" caption="Figure 1 - Hyperledger / Blockchain architecture." >}}
+{{< figure src="./fig1-architecture.webp" caption="Figure 1 - Hyperledger / Blockchain architecture." >}}
 
 # HyperLedger
 HyperLedger is an open source initiative which basically houses the blockchain code that we were working on over the weekend. Using both Docker and IBM’s very own infrastructure IBM Z servers running LinuxOne we were able to deploy our blockchain code to this HyperLedger fabric. We were able to communicate with the chain code that was running within the fabric with some REST API calls that were supplied by the HyperLedger toolkit which once we worked out the kinks wasn’t too hard to use at all. It’s worth noting that during this weekend we used version 0.6 of the fabric, as version 1 is deprecating the REST API and moving over to a node SDK instead for those that might be interested in playing around with the technology. As a direct quote from the [hyperledger.org](https://hyperledger.org) website on this technology:
@@ -45,26 +45,26 @@ The next idea came from David, which was a more futuristic tackle of the problem
 
 The last of the initial ideas came from Andrei, who suggested that we allow programmers to have ownership of their software as intellectual property (You’d see it was theirs from when they registered it to the blockchain) and you could charge users of your code per execution almost like a VPS per hour type business model. Again due to time constraints we decided that it was maybe a little out of our reach, so we scoped it down to our final idea which was BlockCV!
 
-{{< figure src="./fig2-smart-contract.webcp" caption="Figure 2 - Initial Object Design." >}}
+{{< figure src="./fig2-smart-contract.webp" caption="Figure 2 - Initial Object Design." >}}
 
-{{< figure src="./fig3-concept.webcp" caption="Figure 3 - High level application design." >}}
+{{< figure src="./fig3-concept.webp" caption="Figure 3 - High level application design." >}}
 
 BlockCV essentially was a blockchain that contained student entities which held their name, their date of birth, a list of qualifications, which was an array which could be initialised as empty and a list of employers which the student had granted access of his or her records to (See Figure 2). With the qualifications list containing an array of Qualification objects (Or structs as it is in GoLang), which held the properties of the University, and the nature of the course that the student completed. We then took this basic model and started to design the back end code/interfaces before implementing them and hooking a GUI to it all!
 
 To briefly summarise what I got up to over the course of the weekend, I mostly focused on getting used to the GoLang environments and playing around with the IBM servers, while planning how I was going to pitch our business case. I tried to apply some of my own personal programming knowledge where my team mates were hitting walls with the different sections of the code base that they were working on. The source code for which can be found here as we used Github to deploy our code on to the IBM servers.
 
-{{< figure src="./fig4-ui.webcp" caption="Figure 4 - GUI Web Application." >}}
+{{< figure src="./fig4-ui.webp" caption="Figure 4 - GUI Web Application." >}}
 
 For the front end Sam put together some bootstrap pages which were then hooked up to the node.js framework (…30 minutes before the presesntation), where the communication layer was written by David. A lot of the business logic is done within the node.js layer, hashing the students name and DoB together to a base64 encoded string as the Unique identifier for the student (Could be more unique, but hey … it was a hackathon!). The back-end of the application was written in GoLang. The back-end was basically a database layer that could store to, and retrieve from the blockchain. The only thing we sent to the blockchain was a serialised JSON object of the student object, which encapsulated all the information we needed to make a decent prototype. Once the structs and objects were in place to mirror one another from the back-end to the front-end and the business layer was finished, we pulled it all together and we were the first team to get a working blockchain prototype and that’s the moment we knew that we had a real good chance of winning this thing!
 
 # Sunday — Judging Day!
 When Sunday came around, we were told that judging would start at 3pm with lunch and refreshments being served at around 2pm. This gave us approximately 5 hours to scrub everything up and get the pitch strategy down. The slides that we put together can be found here. We (…well, Dave) even went so far as to register a domain for the project to add to its finesse. I delivered the pitch and Dave demo’d our prototype and overall at the time I thought it went well.
 
-{{< figure src="./fig5-presentation.webcp" caption="Figure 5 - Pitching BlockCV with the guys." >}}
+{{< figure src="./fig5-presentation.webp" caption="Figure 5 - Pitching BlockCV with the guys." >}}
 
 but as they say, the proof was in the pudding and we’d done enough to secure the Trophy! It was a fantastic weekend and I learned a great deal about blockchain and going from problem to business case to solution in just 48 hours. I had the opportunity to network with some really intelligent people from industry, which was invaluable.
 
-{{< figure src="./fig6-trophy.webcp" caption="Figure 6 - Great Success! BlockCV had done it!." >}}
+{{< figure src="./fig6-trophy.webp" caption="Figure 6 - Great Success! BlockCV had done it!." >}}
 
 …And then I just had a really long train journey back to Plymouth, obviously with a big smile on my face. Who knows, maybe for the next Hackathon there might be a chance that I can find this team again to defend our title once more!
 
