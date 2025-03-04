@@ -19,12 +19,13 @@ params:
         url: "https://github.com/DanDecrypted/CV"
 
   socialIcons:
-    - name: Twitter
-      url: "https://twitter.com/MrDanOak"
+    - name: BlueSky
+      url: "https://bsky.app/profile/dan-oak.dev"
     - name: Github
       url: "https://github.com/MrDanOak"
     - name: LinkedIn
       url: "https://www.linkedin.com/in/danoak/"
+
   
   homeInfoParams:
     Title: Hey! I'm Dan 👋
