@@ -4,19 +4,9 @@ theme: papermod
 languageCode: en-gb
 params:
   env: production
-  profileMode:
-    enabled: true
-    title: "Hey! I'm Dan 👋"
-    subtitle: "This is my corner of the internet where I ramble about coding things"
-    imageUrl: "https://dan-oak.dev/profile-picture.jpg"
-    imageTitle: "Dan Oak"
-    imageWidth: 200 
-    imageHeight: 200 
-    buttons: 
-      - name: Blog
-        url: "/blog/"
-      - name: CV
-        url: "https://github.com/DanDecrypted/CV"
+  homeInfoParams:
+    Title: "Hey! I'm Dan 👋"
+    Content: "This is my corner of the internet where I ramble about coding things"
 
   socialIcons:
     - name: BlueSky
@@ -25,8 +15,3 @@ params:
       url: "https://github.com/MrDanOak"
     - name: LinkedIn
       url: "https://www.linkedin.com/in/danoak/"
-
-  
-  homeInfoParams:
-    Title: Hey! I'm Dan 👋
-    Content: This is my corner of the internet where I ramble about coding things
