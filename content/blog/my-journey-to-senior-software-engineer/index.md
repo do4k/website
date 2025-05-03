@@ -46,9 +46,9 @@ I went between a few different places after the graduate role, mostly focusing o
 
 When I break it down, I think these are the main qualities of a senior engineer: 
 
-🌱 Help cultivate the growth of others
-📖 Keep up your studies and learning new things in a fast moving industry
-🗣️ Learn to be an effective communicator
+🌱 Help cultivate the growth of others\
+📖 Keep up your studies and learning new things in a fast moving industry\
+🗣️ Learn to be an effective communicator\
 🤔 Be interested in experimentation
 
 If you nail those 4 things, you will be a mega force multiplier for any organisation you work in. 
