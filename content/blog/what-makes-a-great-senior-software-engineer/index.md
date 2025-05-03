@@ -8,6 +8,8 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
+comments: true
+bsky: "https://bsky.app/profile/dan-oak.dev/post/3ll7im7omas23"
 ---
 
 In my previous blog, I mentioned that I think there are four main components to a great senior software engineer. I thought I would use this post to dive into those points a little more: 
@@ -23,7 +25,9 @@ When you are required to give feedback, it is important to provide actionable po
 Software engineering is ever-evolving, and staying relevant means being a lifelong learner. I find that keeping up to date with experts in the field creating content is a very good way to get concise news and industry information. I will list a few of my favourite resources below: 
 
 👉🏻 [Nick Chapsas](https://www.youtube.com/@nickchapsas) for .NET
+
 👉🏻 [Cassidy Williams](https://cassidoo.co/) and her [newsletter](https://cassidoo.co/newsletter/) which has general tech industry news and funny jokes :-)
+
 👉🏻 [Fireship](https://www.youtube.com/@Fireship) youtube channel for quick snippets of industry news
 
 Making time in your schedule just to get up to date on the news in your industry leads to more innovation and the desire to experiment (more on that later).
