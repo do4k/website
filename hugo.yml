@@ -15,3 +15,7 @@ params:
       url: "https://github.com/MrDanOak"
     - name: LinkedIn
       url: "https://www.linkedin.com/in/danoak/"
+
+  analytics:
+    google:
+      siteVerificationTag: "G-9T8N01EQKW"
