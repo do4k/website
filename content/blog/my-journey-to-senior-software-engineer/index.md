@@ -8,6 +8,8 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
+comments: true
+bsky: https://bsky.app/profile/dan-oak.dev/post/3loc5ziceic2f
 ---
 
 # The Beginning
