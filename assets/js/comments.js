@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const postDateLink = document.createElement("a");
     postDateLink.href = `https://bsky.app/profile/${author.did}/post/${post.uri.split("/").pop()}`;
     postDateLink.target = "_blank";
-    
+
     postDateLink.textContent = formatDate(postDate);
     postDateDiv.appendChild(postDateLink);
     authorDiv.appendChild(postDateDiv);
@@ -245,5 +245,5 @@ document.addEventListener("DOMContentLoaded", () => {
       "Dec"
     ]
 
-    return `${d} ${months[m]} ${y} @ ${h < 10 ? '0' + h : h}:${min < 10 ? '0' + min : min}`;
+    return `${months[m]} ${d}, ${y} @ ${h < 10 ? '0' + h : h}:${min < 10 ? '0' + min : min}`;
   }
