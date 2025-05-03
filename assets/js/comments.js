@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderComment(comment) {
     const { post } = comment;
     const { author } = post;
-  
+
     const commentDiv = document.createElement("div");
     commentDiv.className = "comment";
   
@@ -167,6 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     authorLink.href = `https://bsky.app/profile/${author.did}`;
     authorLink.target = "_blank";
     authorLink.textContent = author.displayName ?? author.handle;
+    authorLink.textContent = authorLink.textContent == '' ? author.handle : authorLink.textContent;
     authorDiv.appendChild(authorLink);
   
     const handleSpan = document.createElement("span");
@@ -183,6 +184,17 @@ document.addEventListener("DOMContentLoaded", () => {
     actionsDiv.className = "actions";
     actionsDiv.textContent = `${post.replyCount ?? 0} replies | ${post.repostCount ?? 0} reposts | ${post.likeCount ?? 0} likes`;
     commentDiv.appendChild(actionsDiv);
+
+    const postDateDiv = document.createElement("div");
+    postDateDiv.className = "post-date";
+    const postDate = new Date(post.indexedAt);
+    const postDateLink = document.createElement("a");
+    postDateLink.href = `https://bsky.app/profile/${author.did}/post/${post.uri.split("/").pop()}`;
+    postDateLink.target = "_blank";
+    
+    postDateLink.textContent = formatDate(postDate);
+    postDateDiv.appendChild(postDateLink);
+    authorDiv.appendChild(postDateDiv);
   
     if (comment.replies && comment.replies.length > 0) {
       const nestedRepliesDiv = document.createElement("div");
@@ -212,3 +224,26 @@ document.addEventListener("DOMContentLoaded", () => {
     return obj && obj.$type === "app.bsky.feed.defs#threadViewPost";
   }
   
+  function formatDate(dateObj) {
+    const d = dateObj.getDate();
+    const m = dateObj.getMonth() + 1; // Months are zero-based
+    const y = dateObj.getFullYear();
+    const h = dateObj.getHours();
+    const min = dateObj.getMinutes();
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ]
+
+    return `${d} ${months[m]} ${y} @ ${h < 10 ? '0' + h : h}:${min < 10 ? '0' + min : min}`;
+  }

@@ -2,12 +2,41 @@ figcaption {
   text-align: center;
 }
 
+a {
+  font-weight: bold;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  text-decoration: underline;
+}
+
 .comment {
   padding: 10px 0;
 }
 .author {
-  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
+
+.author span {
+  color: #666;
+}
+
+.author .post-date {
+  margin-left: 5px;
+}
+
+.author .post-date a {
+  font-size: 12px;
+}
+
 .avatar {
   width: 24px;
   height: 24px;
@@ -25,4 +54,8 @@ figcaption {
 }
 .nested-replies .comment {
   margin-bottom: 0;
+}
+
+.post-content a {
+  box-shadow: 0 0px;
 }
