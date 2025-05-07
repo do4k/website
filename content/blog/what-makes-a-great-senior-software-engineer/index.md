@@ -10,6 +10,12 @@ ShowPostNavLinks: true
 ShowWordCount: true
 comments: true
 bsky: "https://bsky.app/profile/dan-oak.dev/post/3ll7im7omas23"
+cover:
+    image: "cover.png"
+    alt: "What makes a great senior software engineer"
+    caption: "What makes a great senior software engineer"
+    relative: true 
+    hidden: false 
 ---
 
 In my previous blog, I mentioned that I think there are four main components to a great senior software engineer. I thought I would use this post to dive into those points a little more: 

@@ -10,6 +10,12 @@ ShowPostNavLinks: true
 ShowWordCount: true
 comments: true
 bsky: https://bsky.app/profile/dan-oak.dev/post/3loc5ziceic2f
+cover:
+    image: "cover.jpeg"
+    alt: "Journey to senior software engineer"
+    caption: "Journey to senior software engineer"
+    relative: true 
+    hidden: false 
 ---
 
 # The Beginning
