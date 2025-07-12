@@ -12,9 +12,11 @@ params:
     - name: BlueSky
       url: "https://bsky.app/profile/dan-oak.dev"
     - name: Github
-      url: "https://github.com/MrDanOak"
+      url: "https://github.com/do4k"
     - name: LinkedIn
       url: "https://www.linkedin.com/in/danoak/"
+    - name: Kofi
+      url: "https://ko-fi.com/danxoak"
 
   analytics:
     google:
