@@ -1,6 +1,6 @@
 ---
 title: "Attending my first Hackathon with Plymouth University"
-date: "2016-11-24T20:30:46-07:00"
+date: "2016-11-24T20:30:46"
 author: "Dan Oak"
 description: "Attending my first Hackathon"
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: "My Journey to Senior Software Engineer"
-date: "2025-03-05T12:49:46-07:00"
+date: "2025-03-05T12:49:46"
 author: "Dan Oak"
 description: "A breakdown of how I ended up in the senior software engineer role"
 draft: false

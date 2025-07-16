@@ -1,6 +1,6 @@
 ---
 title: "C# Plays Bejeweled Blitz"
-date: "2015-12-25T11:49:46-07:00"
+date: "2015-12-25T11:49:46"
 author: "Dan Oak"
 description: "How to use C# to play Bejeweled Blitz"
 draft: false
