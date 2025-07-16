@@ -1,17 +1,13 @@
 ---
-title: "Morning food market notifications"
+title: "How I notify my office about food market vans"
 date: "2025-07-12T20:22:00"
 author: "Dan Oak"
-description: "How to use C# to play Bejeweled Blitz"
-draft: false
+description: "This is a post about the Bristol Nosh Notifier that is built using a web scraper, an API, and a cron job"
+draft: true
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
-cover:
-    image: "grid-1.png" # image path/url
-    alt: "C# Plays Bejeweld Blitz" # alt text
-    caption: "C# Plays Bejeweld Blitz" # display caption under cover
-    relative: true # when using page bundles set this to true
-    hidden: false # only hide on current single page
 ---
+
+Hello world

@@ -1,6 +1,6 @@
 ---
 title: "What Makes a Great Senior Software Engineer"
-date: "2025-03-05T17:49:46-07:00"
+date: "2025-03-05T17:49:46"
 author: "Dan Oak"
 description: "What I believe are the steps to becomming a good senior sofware engineer"
 draft: false
