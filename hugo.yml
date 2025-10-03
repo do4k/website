@@ -1,4 +1,4 @@
-baseURL: https://dan-oak.dev/
+baseURL: https://danoak.dev/
 title: Dan Oak - Software Engineer
 theme: papermod
 languageCode: en-gb
@@ -10,7 +10,7 @@ params:
 
   socialIcons:
     - name: BlueSky
-      url: "https://bsky.app/profile/dan-oak.dev"
+      url: "https://bsky.app/profile/danoak.dev"
     - name: Github
       url: "https://github.com/do4k"
     - name: LinkedIn

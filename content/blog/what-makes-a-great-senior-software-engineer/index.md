@@ -9,7 +9,7 @@ ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
 comments: true
-bsky: "https://bsky.app/profile/dan-oak.dev/post/3ll7im7omas23"
+bsky: "https://bsky.app/profile/danoak.dev/post/3ll7im7omas23"
 cover:
     image: "cover.png"
     alt: "What makes a great senior software engineer"

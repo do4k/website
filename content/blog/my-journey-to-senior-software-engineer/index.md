@@ -9,7 +9,7 @@ ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
 comments: true
-bsky: https://bsky.app/profile/dan-oak.dev/post/3loc5ziceic2f
+bsky: https://bsky.app/profile/danoak.dev/post/3loc5ziceic2f
 cover:
     image: "cover.jpeg"
     alt: "Journey to senior software engineer"
