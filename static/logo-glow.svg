@@ -12,16 +12,21 @@
         </g>
         
         <linearGradient id="spinningGlow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="2320" y2="0">
-            <stop offset="0%" stop-color="#00aaff" /> <stop offset="25%" stop-color="#ffffff" /> <stop offset="50%" stop-color="#0073e6" /> <stop offset="75%" stop-color="#ffffff" /> <stop offset="100%" stop-color="#00aaff" /> <animateTransform attributeName="gradientTransform"
+            <stop offset="0%" stop-color="#00aaff" /> 
+            <stop offset="25%" stop-color="#ffffff" /> 
+            <stop offset="50%" stop-color="#0073e6" /> 
+            <stop offset="75%" stop-color="#ffffff" /> 
+            <stop offset="100%" stop-color="#00aaff" /> 
+            <animateTransform attributeName="gradientTransform"
                               type="rotate"
                               from="0 1160 1160"
                               to="360 1160 1160"
-                              dur="4s"
+                              dur="5s"
                               repeatCount="indefinite" />
         </linearGradient>
 
         <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="25" result="coloredBlur"/>
+            <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
         </filter>
     </defs>
 
