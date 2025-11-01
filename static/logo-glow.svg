@@ -11,6 +11,10 @@
             <path d="M600,100L800,100L1000,500L900,700L600,100Z"/>
         </g>
         
+        <filter id="maskBlur" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="15"/>
+        </filter>
+        
         <linearGradient id="spinningGlow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1920" y2="0">
             <stop offset="0%" stop-color="#00aaff" /> <stop offset="25%" stop-color="#ffffff" /> <stop offset="50%" stop-color="#0073e6" /> <stop offset="75%" stop-color="#ffffff" /> <stop offset="100%" stop-color="#00aaff" /> <animateTransform attributeName="gradientTransform"
                               type="rotate"
@@ -41,6 +45,11 @@
     </g>
     <g transform="matrix(2.66667,0,0,2.66667,-780,-106.667)">
         <path d="M600,100L800,100L1000,500L900,700L600,100Z" style="fill:rgb(62,163,255);"/>
+    </g>
+
+    <rect id="blurredMaskBase" x="0" y="0" width="100%" height="100%" fill="white" style="opacity:0;"/>
+    <g id="blurredMask" filter="url(#maskBlur)">
+        <use href="#logoPaths" fill="white"/>
     </g>
 
 </svg>
