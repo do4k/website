@@ -46,7 +46,7 @@ We are finding things out as we go. We are discovering that the vendor's platfor
 
 If I were to hold myself accountable to a deadline based on guesses rather than technical facts, I would be setting myself up for burnout.
 
-## Communication Over Internalized Stress
+## Communication Over Internalised Stress
 
 I understand the value of estimates. Businesses need timelines to coordinate marketing, sales, and strategy. I am not ignoring the deadline; I am just refusing to let it ruin my mood.
 
