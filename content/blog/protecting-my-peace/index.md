@@ -16,13 +16,13 @@ Right now, my team is in the thick of a significant integration with a complex t
 
 The deadline? We’ve been given one month to fully figure out the integration and go live.
 
-In many environments, this is where the panic sets in. The natural reaction is to look at that four-week window, compare it to the mountain of unknowns, and feel paralyzed. But I’ve learned that taking that stress on doesn't make the software build faster.
+In many environments, this is where the panic sets in. The natural reaction is to look at that four-week window, compare it to the mountain of unknowns, and feel paralysed. But I’ve learned that taking that stress on doesn't make the software build faster.
 
 Instead, I focus on protecting my peace. Here is how I balance the need for delivery with my own well-being.
 
 ## Converting Paralysis into Excitement
 
-If I woke up every morning fixating on the sheer volume of work required to hit that one-month target, I wouldn't want to get out of bed. Staring at the whole mountain at once is paralyzing.
+If I woke up every morning fixating on the sheer volume of work required to hit that one-month target, I wouldn't want to get out of bed. Staring at the whole mountain at once is paralysing.
 
 I want to wake up excited to plough on with the tasks ahead. To do that, I have to mentally detach myself from the pressure of the timeline and focus entirely on the engineering puzzle right in front of me.
 
@@ -34,13 +34,13 @@ My attitude is: *What is the most interesting and important thing I can solve to
 
 By zooming in on the immediate "next step," the work remains engaging. I get the satisfaction of solving problems and making tangible progress every day, rather than feeling crushed by what is left to do.
 
-## Communication Over Internalized Stress
+## Communication Over Internalised Stress
 
 I understand the value of estimates. Businesses need timelines to coordinate marketing, sales, and strategy. I am not ignoring the deadline; I am just refusing to let it ruin my mood.
 
 My approach isn't to say "it's done when it's done" in a dismissive way, but rather to be transparent about the reality of the work. Software integration is a process of discovery. We are finding that the vendor's platform doesn’t always behave as promised, or that there are limitations we didn't see coming.
 
-Instead of internalizing the stress of these delays, I focus on **communicating progress and work outstanding.**
+Instead of internalising the stress of these delays, I focus on **communicating progress and work outstanding.**
 
 I don't get bogged down needing to make decisions for things we don't have the full picture of yet. If a stakeholder asks if a feature is feasible by Friday, and I haven't explored that area yet, I don't panic or over-promise. I simply say, *"I don't know yet, but I will update you as soon as we get to that layer of the discovery."*
 
