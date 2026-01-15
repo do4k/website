@@ -1,7 +1,7 @@
 ---
 title: "Protecting My Peace: How I Stay Motivated Facing 'Impossible' Deadlines"
 date: 2026-01-15
-draft: true
+draft: false
 tags: ["Software Engineering", "Mental Health", "Productivity", "Work Life Balance"]
 categories: ["Career", "Dev Log"]
 ShowReadingTime: true
