@@ -1,7 +1,7 @@
 ---
 title: "Protecting My Peace: How I Stay Motivated Facing 'Impossible' Deadlines"
 date: 2026-01-15
-draft: false
+draft: true
 tags: ["Software Engineering", "Mental Health", "Productivity", "Work Life Balance"]
 categories: ["Career", "Dev Log"]
 ShowReadingTime: true
@@ -34,11 +34,23 @@ My attitude is: *What is the most interesting and important thing I can solve to
 
 By zooming in on the immediate "next step," the work remains engaging. I get the satisfaction of solving problems and making tangible progress every day, rather than feeling crushed by what is left to do.
 
-## Communication Over Internalised Stress
+## The Reality of "Discovery as We Go"
+
+The fundamental reason I don't worry about the timeline is that software integration is rarely a straight line; it is a process of discovery.
+
+In this specific project, the uncertainty isn't just coming from the code—it's coming from the requirements. Our Product team aren't 100% sure what the third party is capable of. They are essentially making guesses about how the integration will work and relying on us, the developers, to figure out the reality as we go.
+
+It creates a strange contrast: the frontend designs we’ve been given are fairly well considered and polished. However, there are little to no actual product requirements from a technical backend point of view. This gap points to a serious lack of knowledge in the business around how the backend works and how complex it is to interact with external APIs.
+
+We are finding things out as we go. We are discovering that the vendor's platform doesn’t always behave as promised, and we are uncovering limitations that the Product team simply assumed wouldn't exist.
+
+If I were to hold myself accountable to a deadline based on guesses rather than technical facts, I would be setting myself up for burnout.
+
+## Communication Over Internalized Stress
 
 I understand the value of estimates. Businesses need timelines to coordinate marketing, sales, and strategy. I am not ignoring the deadline; I am just refusing to let it ruin my mood.
 
-My approach isn't to say "it's done when it's done" in a dismissive way, but rather to be transparent about the reality of the work. Software integration is a process of discovery. We are finding that the vendor's platform doesn’t always behave as promised, or that there are limitations we didn't see coming.
+My approach isn't to say "it's done when it's done" in a dismissive way, but rather to be transparent about the reality of the work.
 
 Instead of internalising the stress of these delays, I focus on **communicating progress and work outstanding.**
 
