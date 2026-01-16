@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+    
+    {{- if .Description }}
+    <meta name="description" content="{{ .Description }}">
+    {{- end }}
+    
+    <link rel="canonical" href="{{ .Permalink }}">
+    
+    {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+    <meta name="robots" content="index, follow">
+    {{- else }}
+    <meta name="robots" content="noindex, nofollow">
+    {{- end }}
+    
+    {{- if site.Params.analytics.google.siteVerificationTag }}
+    <meta name="google-site-verification" content="{{ site.Params.analytics.google.siteVerificationTag }}">
+    {{- end }}
+    
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --accent-blue: #3b82f6;
+            --accent-white: #ffffff;
+            --nav-bg: rgba(255, 255, 255, 0.95);
+            --shadow-color: rgba(59, 130, 246, 0.15);
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0a0a0a;
+                --text-color: #e5e5e5;
+                --nav-bg: rgba(26, 26, 26, 0.95);
+                --shadow-color: rgba(59, 130, 246, 0.3);
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: 100px;
+        }
+        
+        /* Animated Navigation Bar */
+        .acorn-header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: calc(100% - 40px);
+            max-width: 1200px;
+        }
+        
+        .acorn-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px var(--shadow-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Animated glow effect */
+        .acorn-nav::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                #3b82f6,
+                transparent,
+                #ffffff,
+                transparent,
+                #3b82f6,
+                transparent
+            );
+            background-size: 400% 400%;
+            border-radius: 10px;
+            z-index: -1;
+            animation: shimmer 8s ease-in-out infinite;
+            opacity: 0.6;
+        }
+        
+        .acorn-nav::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--nav-bg);
+            border-radius: 10px;
+            z-index: -1;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-color);
+            gap: 0.75rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: opacity 0.3s;
+        }
+        
+        .logo-link:hover {
+            opacity: 0.7;
+        }
+        
+        .nav-logo {
+            width: 36px;
+            height: 36px;
+        }
+        
+        .nav-name {
+            white-space: nowrap;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .nav-icon {
+            color: var(--text-color);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+        
+        .nav-icon:hover {
+            color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .acorn-header {
+                width: calc(100% - 20px);
+                top: 10px;
+            }
+            
+            .acorn-nav {
+                padding: 0.75rem 1.25rem;
+            }
+            
+            .nav-name {
+                font-size: 0.95rem;
+            }
+            
+            .nav-logo {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .nav-right {
+                gap: 1rem;
+            }
+            
+            body {
+                padding-top: 90px;
+            }
+        }
+    </style>
+</head>

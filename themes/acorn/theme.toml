@@ -1,0 +1,12 @@
+name = "Acorn"
+license = "MIT"
+licenselink = "https://github.com/do4k/acorn/blob/main/LICENSE"
+description = "A custom Hugo theme by Dan Oak, based on PaperMod"
+homepage = "https://danoak.dev/"
+tags = ["blog", "minimal", "responsive", "fast", "custom"]
+features = ["responsive", "fast", "animated"]
+min_version = "0.112.0"
+
+[author]
+  name = "Dan Oak"
+  homepage = "https://danoak.dev/"

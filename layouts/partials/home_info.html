@@ -1,0 +1,16 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1 style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <img src="/logo-glow.svg" alt="Dan Oak Logo" style="width: 40px; height: 40px; display: inline-block;" />
+            {{ .Title | markdownify }}
+        </h1>
+    </header>
+    <div class="entry-content">
+        {{ .Content | markdownify }}
+    </div>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- end -}}

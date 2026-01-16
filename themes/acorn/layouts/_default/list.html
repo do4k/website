@@ -1,0 +1,365 @@
+{{- define "main" }}
+
+<style>
+.post-list {
+    margin-top: 2rem;
+}
+
+.post-entry {
+    background: var(--nav-bg);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--shadow-color);
+    border-color: var(--accent-blue);
+}
+
+.post-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-content-wrapper {
+    padding: 1.5rem;
+}
+
+.post-entry h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-entry h2 a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.post-entry h2 a:hover {
+    color: var(--accent-blue);
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.post-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.post-meta-separator {
+    opacity: 0.5;
+}
+
+.post-summary {
+    margin-top: 0.75rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.post-tag {
+    background: var(--accent-blue);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.post-tag:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.list-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.list-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.list-header p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.home-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.home-logo-section {
+    margin-bottom: 2rem;
+}
+
+.home-logo {
+    width: 80px;
+    height: 80px;
+    animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.home-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.home-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .home-header h1 {
+        font-size: 2rem;
+    }
+    
+    .home-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .list-header h1 {
+        font-size: 2rem;
+    }
+}
+</style>
+
+{{- if .IsHome }}
+<article class="home-intro">
+    <div class="home-logo-section">
+        <img src="/logo-glow.svg" alt="Dan Oak Logo" class="home-logo" />
+    </div>
+    <header class="home-header">
+        <h1 style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            Hey! I'm Dan 👋
+        </h1>
+        <p class="home-subtitle">This is my corner of the internet where I ramble about coding things</p>
+    </header>
+</article>
+
+<section class="post-list">
+    {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{- range $pages }}
+    <article class="post-entry">
+        {{- if .Params.cover.image }}
+        {{- $cover := .Params.cover }}
+        {{- $imgPath := "" }}
+        {{- if $cover.relative }}
+            {{- $imgPath = .Resources.GetMatch $cover.image }}
+        {{- else }}
+            {{- $imgPath = $cover.image }}
+        {{- end }}
+        {{- if $imgPath }}
+            {{- if not (strings.HasPrefix (string $imgPath) "http") }}
+                {{- if $cover.relative }}
+                <img src="{{ $imgPath.Permalink }}" alt="{{ $cover.alt | default .Title }}" class="post-cover" loading="lazy" />
+                {{- else }}
+                <img src="{{ $imgPath | absURL }}" alt="{{ $cover.alt | default .Title }}" class="post-cover" loading="lazy" />
+                {{- end }}
+            {{- else }}
+                <img src="{{ $imgPath }}" alt="{{ $cover.alt | default .Title }}" class="post-cover" loading="lazy" />
+            {{- end }}
+        {{- end }}
+        {{- end }}
+        
+        <div class="post-content-wrapper">
+            <header>
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <div class="post-meta">
+                    {{- if .Params.author }}
+                    <span class="post-meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        {{ .Params.author }}
+                    </span>
+                    <span class="post-meta-separator">•</span>
+                    {{- end }}
+                    <span class="post-meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                    </span>
+                    <span class="post-meta-separator">•</span>
+                    <span class="post-meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        {{ math.Round (div (countwords .Content) 200.0) }} min read
+                    </span>
+                    <span class="post-meta-separator">•</span>
+                    <span class="post-meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                        {{ countwords .Content }} words
+                    </span>
+                </div>
+            </header>
+            {{- if .Params.tags }}
+            <div class="post-tags">
+                {{- range .Params.tags }}
+                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="post-tag">{{ . }}</a>
+                {{- end }}
+            </div>
+            {{- end }}
+            {{- if .Summary }}
+            <div class="post-summary">
+                {{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}
+            </div>
+            {{- end }}
+        </div>
+    </article>
+    {{- end }}
+</section>
+
+{{- else }}
+{{- /* List pages like /blog/ */ -}}
+<header class="list-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <p>{{ .Description }}</p>
+    {{- end }}
+</header>
+
+<section class="post-list">
+    {{- range .Pages }}
+    <article class="post-entry">
+        {{- if .Params.cover.image }}
+        {{- $cover := .Params.cover }}
+        {{- $imgPath := "" }}
+        {{- if $cover.relative }}
+            {{- $imgPath = .Resources.GetMatch $cover.image }}
+        {{- else }}
+            {{- $imgPath = $cover.image }}
+        {{- end }}
+        {{- if $imgPath }}
+            {{- if not (strings.HasPrefix (string $imgPath) "http") }}
+                {{- if $cover.relative }}
+                <img src="{{ $imgPath.Permalink }}" alt="{{ $cover.alt | default .Title }}" class="post-cover" loading="lazy" />
+                {{- else }}
+                <img src="{{ $imgPath | absURL }}" alt="{{ $cover.alt | default .Title }}" class="post-cover" loading="lazy" />
+                {{- end }}
+            {{- else }}
+                <img src="{{ $imgPath }}" alt="{{ $cover.alt | default .Title }}" class="post-cover" loading="lazy" />
+            {{- end }}
+        {{- end }}
+        {{- end }}
+        
+        <div class="post-content-wrapper">
+            <header>
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <div class="post-meta">
+                    {{- if .Params.author }}
+                    <span class="post-meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        {{ .Params.author }}
+                    </span>
+                    <span class="post-meta-separator">•</span>
+                    {{- end }}
+                    <span class="post-meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                    </span>
+                    <span class="post-meta-separator">•</span>
+                    <span class="post-meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        {{ math.Round (div (countwords .Content) 200.0) }} min read
+                    </span>
+                    <span class="post-meta-separator">•</span>
+                    <span class="post-meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                        {{ countwords .Content }} words
+                    </span>
+                </div>
+            </header>
+            {{- if .Params.tags }}
+            <div class="post-tags">
+                {{- range .Params.tags }}
+                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="post-tag">{{ . }}</a>
+                {{- end }}
+            </div>
+            {{- end }}
+            {{- if .Summary }}
+            <div class="post-summary">
+                {{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}
+            </div>
+            {{- end }}
+        </div>
+    </article>
+    {{- end }}
+</section>
+{{- end }}
+
+{{- end }}

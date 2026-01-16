@@ -1,9 +1,10 @@
 baseURL: https://danoak.dev/
 title: Dan Oak - Software Engineer
-theme: papermod
+theme: acorn
 languageCode: en-gb
 params:
   env: production
+  mainSections: ["blog"]
   homeInfoParams:
     Title: "Hey! I'm Dan 👋"
     Content: "This is my corner of the internet where I ramble about coding things"
