@@ -8,6 +8,7 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowWordCount: true
+bsky: "https://bsky.app/profile/danoak.dev/post/3mdlt2rsx7s2w"
 ---
 
 ## My Prediction of the Software Engineering Landscape to Come
