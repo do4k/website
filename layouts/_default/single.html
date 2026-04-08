@@ -161,6 +161,107 @@
     height: auto;
     border-radius: 8px;
     margin: 1.5rem 0;
+    cursor: zoom-in;
+}
+
+.post-content figure {
+    margin: 1.5rem 0;
+}
+
+.post-content figure img {
+    margin: 0 0 0.5rem 0;
+}
+
+.post-content figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Table styling */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    display: block;
+}
+
+.post-content thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.post-content tbody {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.post-content th {
+    background: rgba(59, 130, 246, 0.1);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    white-space: nowrap;
+}
+
+.post-content td {
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.post-content tbody tr:hover {
+    background: rgba(59, 130, 246, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    .post-content th {
+        background: rgba(59, 130, 246, 0.15);
+        border-color: rgba(59, 130, 246, 0.25);
+    }
+    
+    .post-content td {
+        border-color: rgba(59, 130, 246, 0.2);
+    }
+    
+    .post-content tbody tr:hover {
+        background: rgba(59, 130, 246, 0.1);
+    }
+}
+
+/* Image lightbox modal */
+.image-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    cursor: zoom-out;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    backdrop-filter: blur(4px);
+}
+
+.image-modal-overlay.active {
+    display: flex;
+}
+
+.image-modal-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
 }
 
 .post-nav {
@@ -211,7 +312,48 @@
     .post-nav {
         grid-template-columns: 1fr;
     }
+    
+    .post-content table {
+        font-size: 0.85rem;
+    }
+    
+    .post-content th,
+    .post-content td {
+        padding: 0.5rem 0.75rem;
+    }
 }
 </style>
+
+<div class="image-modal-overlay" id="imageModal">
+    <img id="modalImage" src="" alt="">
+</div>
+
+<script>
+(function() {
+    var modal = document.getElementById('imageModal');
+    var modalImg = document.getElementById('modalImage');
+    
+    document.querySelectorAll('.post-content img').forEach(function(img) {
+        img.addEventListener('click', function() {
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    modal.addEventListener('click', function() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+})();
+</script>
 
 {{- end }}
