@@ -1,0 +1,61 @@
+mainSections = ["blog"]
+rssFullContent = true
+favicon = "img/favicon.png"
+
+SortBy = "default"
+
+[footer]
+since = 2016
+customText = ""
+
+[dateFormat]
+published = ":date_full"
+lastUpdated = ":date_full"
+
+[sidebar]
+compact = false
+avatar = "img/avatar.png"
+subtitle = "Hey! I'm Dan 👋 This is my corner of the internet where I ramble about coding things"
+
+[article]
+headingAnchor = false
+math = false
+toc = true
+readingTime = true
+
+[article.list]
+showTags = false
+
+[article.license]
+enabled = false
+
+[article.mermaid]
+look = "classic"
+lightTheme = "default"
+darkTheme = "dark"
+securityLevel = "strict"
+htmlLabels = true
+transparentBackground = false
+
+[widgets]
+homepage = [
+{ type = "search" },
+{ type = "archives", params = { limit = 5 } },
+{ type = "categories", params = { limit = 10 } },
+{ type = "tag-cloud", params = { limit = 10 } },
+]
+page = [{ type = "toc" }]
+
+[opengraph.twitter]
+site = ""
+card = "summary_large_image"
+
+[colorScheme]
+toggle = true
+default = "auto"
+
+[cookies]
+enabled = false
+
+[comments]
+enabled = false

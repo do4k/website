@@ -1,0 +1,10 @@
+baseURL = "https://danoak.dev/"
+locale = "en-gb"
+title = "Dan Oak - Software Engineer"
+theme = "stack"
+
+defaultContentLanguage = "en"
+hasCJKLanguage = false
+
+[pagination]
+pagerSize = 5
