@@ -8,3 +8,47 @@ hasCJKLanguage = false
 
 [pagination]
 pagerSize = 5
+
+[menu]
+
+  [[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  [menu.main.params]
+  icon = "home"
+
+  [[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "/blog/"
+  [menu.main.params]
+  icon = "article"
+
+  [[menu.social]]
+  identifier = "github"
+  name = "GitHub"
+  url = "https://github.com/do4k"
+  [menu.social.params]
+  icon = "brand-github"
+
+  [[menu.social]]
+  identifier = "bluesky"
+  name = "Bluesky"
+  url = "https://bsky.app/profile/danoak.dev"
+  [menu.social.params]
+  icon = "brand-bluesky"
+
+  [[menu.social]]
+  identifier = "linkedin"
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/danoak/"
+  [menu.social.params]
+  icon = "brand-linkedin"
+
+  [[menu.social]]
+  identifier = "kofi"
+  name = "Ko-fi"
+  url = "https://ko-fi.com/danxoak"
+  [menu.social.params]
+  icon = "heart"
