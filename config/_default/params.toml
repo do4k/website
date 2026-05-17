@@ -1,6 +1,5 @@
 mainSections = ["blog"]
 rssFullContent = true
-favicon = "img/favicon.png"
 
 SortBy = "default"
 
