@@ -1,0 +1,41 @@
+[[main]]
+identifier = "home"
+name = "Home"
+url = "/"
+[main.params]
+icon = "home"
+
+[[main]]
+identifier = "blog"
+name = "Blog"
+url = "/blog/"
+[main.params]
+icon = "article"
+
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/do4k"
+[social.params]
+icon = "brand-github"
+
+[[social]]
+identifier = "bluesky"
+name = "Bluesky"
+url = "https://bsky.app/profile/danoak.dev"
+[social.params]
+icon = "brand-bluesky"
+
+[[social]]
+identifier = "linkedin"
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/danoak/"
+[social.params]
+icon = "brand-linkedin"
+
+[[social]]
+identifier = "kofi"
+name = "Ko-fi"
+url = "https://ko-fi.com/danxoak"
+[social.params]
+icon = "heart"

@@ -1,5 +1,6 @@
 mainSections = ["blog"]
 rssFullContent = true
+favicon = "img/favicon.png"
 
 SortBy = "default"
 
@@ -13,7 +14,7 @@ lastUpdated = ":date_full"
 
 [sidebar]
 compact = false
-avatar = ""
+avatar = "img/avatar.png"
 subtitle = "Hey! I'm Dan 👋 This is my corner of the internet where I ramble about coding things"
 
 [article]
