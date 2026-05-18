@@ -4,10 +4,6 @@ date: 2026-01-29
 draft: false
 tags: ["AI", "Software Engineering", "Future of Work", "Agents", "Spec-Driven Development"]
 categories: ["Development", "AI", "Future"]
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
 bsky: "https://bsky.app/profile/danoak.dev/post/3mdlt2rsx7s2w"
 ---
 

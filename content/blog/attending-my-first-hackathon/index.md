@@ -4,16 +4,8 @@ date: "2016-11-24T20:30:46-07:00"
 author: "Dan Oak"
 description: "Attending my first Hackathon"
 draft: false
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-cover:
-    image: "fig6-trophy.webp" # image path/url
-    alt: "IBM Hackathon Winning" # alt text
-    caption: "Attending my first Hackathon" # display caption under cover
-    relative: true # when using page bundles set this to true
-    hidden: false # only hide on current single page
+
+image: "fig6-trophy.webp"
 ---
 
 # Intro

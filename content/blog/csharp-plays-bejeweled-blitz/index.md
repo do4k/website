@@ -4,16 +4,8 @@ date: "2015-12-25T11:49:46-07:00"
 author: "Dan Oak"
 description: "How to use C# to play Bejeweled Blitz"
 draft: false
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-cover:
-    image: "grid-1.png" # image path/url
-    alt: "C# Plays Bejeweld Blitz" # alt text
-    caption: "C# Plays Bejeweld Blitz" # display caption under cover
-    relative: true # when using page bundles set this to true
-    hidden: false # only hide on current single page
+
+image: "grid-1.png"
 ---
 
 {{< youtube LyR10G9UCzM >}}

@@ -4,10 +4,6 @@ date: 2026-04-08
 draft: false
 tags: ["DynamoDB", "System Design", "Performance", "AWS"]
 categories: ["Development", "Dev Log"]
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
 ---
 
 {{< figure src="./latency-graph.png" caption="p99 latency before and after the sort key redesign." >}}

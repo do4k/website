@@ -4,10 +4,6 @@ date: 2026-01-16
 draft: false
 tags: ["Tech Stack", "Development Tools", "C#", "React", "Golang", "AI", "Hugo"]
 categories: ["Development", "Tools"]
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
 ---
 
 The tools we use define how we work. As we step into 2026, I thought it would be interesting to document the technologies and tools that power my day-to-day development work. This is my current tech stack—a mix of familiar friends and exciting new additions.
