@@ -216,4 +216,4 @@ The June pricing changes make this urgent rather than optional. But even without
 ---
 
 *Inspired by Andrew Poole's talk "Software engineering is dead. Long live Software engineering!" at DDD Southwest 2026.*
-*→ Back to [DDD Southwest 2026 notes](/blog/ddd-southwest-2026)*
+*→ Back to [DDD Southwest 2026 notes](/p/ddd-southwest-2026)*

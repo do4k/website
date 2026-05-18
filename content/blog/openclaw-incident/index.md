@@ -91,4 +91,4 @@ A few things stand out to me about this incident:
 ---
 
 *Referenced in Lotte Pitcher's talk "Open Source Software in the Age of AI" at DDD Southwest 2026.*
-*→ Back to [DDD Southwest 2026 notes](/blog/ddd-southwest-2026)*
+*→ Back to [DDD Southwest 2026 notes](/p/ddd-southwest-2026)*
