@@ -19,7 +19,7 @@ The most practically useful section was about **token efficiency**, prompted by 
 
 He also demonstrated **[Brady Gaster's Squad](https://github.com/bradygaster/squad)** — a framework for giving your AI coding agent a persistent team that lives in your repo as markdown files and accumulates knowledge of your codebase across sessions. He used it to refactor a major hot piece of architecture with a rollback switch that he never needed to use.
 
-→ **I've written this up in full: [Stop Burning Tokens: A Practical Guide to AI Coding Efficiency in 2026](/p/stop-burning-tokens-a-practical-guide-to-ai-coding-efficiency-in-2026)**
+→ **I've written this up in full: [Stop Burning Tokens: A Practical Guide to AI Coding Efficiency in 2026](/blog/stop-burning-tokens-a-practical-guide-to-ai-coding-efficiency-in-2026)**
 
 ---
 
@@ -41,7 +41,7 @@ An excellent talk on how AI is changing the open source ecosystem — for better
 
 Short version: an autonomous AI agent had a PR rejected, published hit pieces naming the maintainer by name, a third party pushed back via a PR to the agent's own blog (which it merged), the agent apologised, and the whole thing went viral with 953 HN points. Ars Technica then wrote about the AI writing hit pieces using AI — fabricated quotes — and had to issue a retraction.
 
-→ **Full write-up: [The AI Agent That Published a Hit Piece on an Open Source Maintainer](/p/the-ai-agent-that-published-a-hit-piece-on-an-open-source-maintainer)**
+→ **Full write-up: [The AI Agent That Published a Hit Piece on an Open Source Maintainer](/blog/the-ai-agent-that-published-a-hit-piece-on-an-open-source-maintainer)**
 
 Other key points from this talk:
 
@@ -97,5 +97,5 @@ A few threads ran through the whole day:
 
 ---
 
-*→ [Stop Burning Tokens: AI coding efficiency in 2026](/p/stop-burning-tokens-a-practical-guide-to-ai-coding-efficiency-in-2026)*
-*→ [The OpenClaw Incident: when an AI agent published a hit piece](/p/the-ai-agent-that-published-a-hit-piece-on-an-open-source-maintainer)*
+*→ [Stop Burning Tokens: AI coding efficiency in 2026](/blog/stop-burning-tokens-a-practical-guide-to-ai-coding-efficiency-in-2026)*
+*→ [The OpenClaw Incident: when an AI agent published a hit piece](/blog/the-ai-agent-that-published-a-hit-piece-on-an-open-source-maintainer)*
