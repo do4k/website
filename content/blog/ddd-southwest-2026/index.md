@@ -8,12 +8,18 @@ categories: ["Conference Notes", "AI", "Development"]
 
 DDD Southwest returned to Bristol on Saturday 18 May 2026. This was a great day — a broad mix of talks from deeply technical to deliberately philosophical. Here are my notes in order of the day, with links to the longer write-ups where I've gone deeper on specific topics.
 
+If there was one thread running through the whole day, it was this: **software engineering is having an identity crisis**. AI is writing a significant chunk of the code now, and it's hard to avoid the question of what that means for us. This wasn't just Andrew Poole's talk — it surfaced everywhere, from open source maintainers drowning in AI-generated PRs to debates about extinction risk to whether we can even review code anymore.
+
+The timing feels significant too. At Christmas, LLMs were arguably just a powerful autocomplete — useful but not transformative. Six months later, they're genuinely generating large amounts of production code. That's a fast shift, and it's clearly landed differently for different people in the room.
+
 ---
 
 ## 09:00 — Andrew Poole: Software engineering is dead. Long live Software engineering!
 *Track 1 - The Junction*
 
 The opening keynote set the tone for most of the conversations that followed. Andrew's argument: models and tooling have crossed a threshold and we need to redefine the value we add as engineers. He's not doom-mongering — it's actually an optimistic framing — but he's honest that the transition is emotionally uncomfortable and the Kübler-Ross change curve applies.
+
+There's a real inflection point here that Andrew articulated well. Six months ago LLMs were broadly just a very powerful autocomplete. Now they're generating significant amounts of real code. That's a fast shift, and it creates a genuine identity question for engineers — if AI is writing a lot of the code, what exactly is our job? Andrew's answer is roughly: your job is shifting from *writing* code to *directing*, *reviewing*, and *taking responsibility* for it. The engineering judgement doesn't disappear — it just moves upstream.
 
 The most practically useful section was about **token efficiency**, prompted by GitHub Copilot's [pricing changes coming June 1](https://docs.github.com/en/copilot/reference/copilot-billing/model-multipliers-for-annual-plans) — Claude Sonnet 4.6 going from 1× to 9× for annual plan holders is hard to ignore. Andrew walked through a stack of tools for reducing waste across every layer of token usage.
 
