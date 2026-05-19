@@ -1,2 +1,2 @@
-blog = "/blog/:slug/"
+blog = "/blog/:filename/"
 page = "/:slug/"
