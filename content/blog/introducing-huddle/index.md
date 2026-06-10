@@ -94,19 +94,25 @@ Cover photos currently land on the Pi's filesystem. At scale you'd point the upl
 
 The upload API route would swap from writing to disk to putting objects into a bucket, and the image URLs would point to the CDN.
 
-### 3. Containerise it
+### 3. Pull the Docker image
 
-The app currently runs as a bare Node process. Dockerising it makes deployment reproducible:
+Huddle is already containerised. A GitHub Actions workflow builds and pushes a multi-platform image (amd64 and arm64) to the GitHub Container Registry on every merge to main:
 
-```dockerfile
-FROM node:22-alpine
-WORKDIR /app
-COPY . .
-RUN npm ci && npm run build
-CMD ["node", "server.js"]
+```bash
+docker pull ghcr.io/do4k/huddle:latest
 ```
 
-Add a `docker-compose.yml` with a volume mount for the SQLite file and you can spin the whole thing up anywhere, including a cheap VPS.
+The image is public, so no authentication needed to pull it. The Dockerfile is a three-stage build — dependencies, build, then a minimal runtime image — with ARM64 handled via a glibc base so `better-sqlite3` uses its prebuilt binary rather than compiling from source (which on a Pi would take around ten minutes).
+
+To run it, mount a volume for the SQLite database and pass your environment variables in:
+
+```bash
+docker run -d \
+  -p 3000:3000 \
+  -v /your/data:/data \
+  --env-file .env \
+  ghcr.io/do4k/huddle:latest
+```
 
 ### 4. Add backup automation
 
