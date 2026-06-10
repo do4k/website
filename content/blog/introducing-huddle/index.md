@@ -6,7 +6,7 @@ tags: ["Side Project", "Next.js", "SQLite", "Raspberry Pi", "Self-Hosting", "Vib
 categories: ["Development", "Side Projects", "Self-Hosting"]
 ---
 
-I've been quietly building something on my phone over the past few months. Not in dedicated engineering sessions at a proper desk, but in stolen moments — commuting, waiting for the kids, half-watching TV. The result is **Huddle**, a family trip planning app that I'm using right now to organise our holiday to the Isle of Wight this summer.
+I've been quietly building something on my phone over the past few months. Not in dedicated engineering sessions at a proper desk, but in stolen moments — commuting, or when I'm out somewhere and can't get my laptop out. The result is **Huddle**, a family trip planning app that I'm using right now to organise our holiday to the Isle of Wight this summer.
 
 The whole thing was largely vibe coded with the Claude mobile app. That's not a humble brag or a disclaimer — it's genuinely how it happened. I'd have an idea, describe it conversationally, and the code would materialise. I'd test it on my phone, point out what was wrong, and we'd iterate. It felt less like engineering and more like a long, productive conversation with a capable collaborator who happened to be very good at Next.js.
 
@@ -14,14 +14,14 @@ The whole thing was largely vibe coded with the Claude mobile app. That's not a 
 
 Huddle is a collaborative trip planner built around a shared **activity bank**. Everyone in your group can suggest activities, RSVP, schedule things, track costs, and export their personal itinerary as a PDF.
 
-Right now I'm using it to plan a trip to the Isle of Wight for late June — we're staying at The Lakes Rookley and I've been adding activities as I find them.
+Right now I'm using it to plan a trip to the Isle of Wight for late June with my sister Katie — we're staying at The Lakes Rookley and I've been adding activities as I find them.
 
 {{< figure src="trip-view.png" alt="Huddle trip view showing Isle of Wight 2026 with the activity bank" >}}
 
 The trip view shows:
 - A cover photo and destination pulled from Google Maps
 - Trip dates and a short description
-- Everyone in your huddle (my wife Katie is on this one)
+- Everyone in your huddle (my sister Katie is on this one)
 - A tabbed interface: Activities, Schedule, My plans, Costs, Travel, Map
 
 ## The Activity Bank
@@ -126,7 +126,7 @@ The invite link system is deliberately open — anyone with a link can register.
 
 ## What's Next
 
-I'll be sharing more screenshots as the Isle of Wight trip comes together — the schedule view once we've pinned down timings, the costs breakdown across the party, and the PDF export we'll each pull down on the day.
+I'll be sharing more screenshots as the Isle of Wight trip comes together — the schedule view once we've pinned down timings, the costs breakdown across the party, and the PDF export Katie and I will each pull down on the day.
 
 The code is in a private repo for now. If there's interest in it as a properly self-hostable project — a Docker image, a clean setup guide, maybe eventually a hosted option — I'd be happy to open it up.
 
