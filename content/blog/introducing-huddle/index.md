@@ -68,9 +68,7 @@ The geo API responses are cached in a SQLite table too, keyed by a SHA-256 hash 
 
 ## It Lives on a Raspberry Pi
 
-Huddle is hosted on my Raspberry Pi at home, running behind a **Cloudflare Tunnel**. The Pi runs the app as a `systemd` service, Next.js serves it directly, and the SQLite database lives on the Pi's SD card.
-
-The Cloudflare Tunnel means I don't need to open any ports on my router. Traffic goes Cloudflare edge → Tunnel daemon → local Next.js process. SSL, DDoS protection, and a proper domain come for free with no configuration on my end.
+Huddle is hosted on my Raspberry Pi at home. The Pi runs the app as a `systemd` service, Next.js serves it directly, and the SQLite database lives on the Pi's SD card. An **nginx reverse proxy** sits in front of it, handling SSL termination and routing traffic from a domain I own to the local Next.js process.
 
 It's genuinely pleasant to self-host something this simple. Cold starts are fast, there's no cloud bill, and I have full control over the data. The trip invite link system means I can share a trip with family without them needing an account on the system — they click the link, register, and they're in. The link shows a branded preview with the trip name and cover photo when shared in iMessage or WhatsApp.
 
