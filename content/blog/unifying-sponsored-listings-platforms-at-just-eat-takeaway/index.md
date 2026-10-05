@@ -45,7 +45,7 @@ Rather than choosing one legacy platform over the other or attempting a fragile 
 
 We designed the platform around four core pillars:
 
-1. **A Consolidated, Modern Tech Stack:** Standardized on our team's core competency—**C#, the .NET ecosystem, and AWS EKS**—to maximize developer velocity, long-term maintainability, and horizontal scalability.
+1. **A Consolidated, Modern Tech Stack:** Standardized on our team's core competency, **C#, the .NET ecosystem, and AWS EKS**, to maximize developer velocity, long-term maintainability, and horizontal scalability.
 2. **Modern CI/CD:** Replaced legacy Concourse and Marathon setups with standardized, unified **GitHub Actions** release pipelines.
 3. **Robust Data & Access Governance:** Enforced granular identity and access control through Okta permission groups rather than ad-hoc credential vaults.
 4. **An Aligned Business Model:** Replaced CPC with a predictable **Cost-Per-Order (CPO)** model.
@@ -99,4 +99,4 @@ Unified TopRank is now actively powering sponsored listings across multiple Just
 
 With the unified platform in place and the legacy PHP footprint retired, our focus shifts to next-generation advertising features: **automated bid optimization algorithms**, **deep real-time analytics dashboards**, and **intelligent placement targeting**.
 
-Consolidating disparate systems into a single, high-performance .NET architecture has not only reduced technical debt—it has given us a foundation built for long-term scalability.
+Consolidating disparate systems into a single, high-performance .NET architecture has not only reduced technical debt, it has given us a foundation built for long-term scalability.
