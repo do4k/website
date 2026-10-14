@@ -4,21 +4,29 @@
    ═══════════════════════════════════════════════════════════════════ */
 
 :root {
-  --glow-blue: rgba(138, 180, 248, 0.45);
-  --glow-blue-soft: rgba(138, 180, 248, 0.18);
-  --glow-violet: rgba(197, 138, 249, 0.35);
-  --gemini-gradient: linear-gradient(103deg, #8ab4f8 0%, #a8c7fa 30%, #c58af9 62%, #f0a6ca 85%, #f6c26b 100%);
+  --glow-blue: rgba(62, 163, 255, 0.5);
+  --glow-blue-soft: rgba(46, 70, 149, 0.35);
+  --glow-deep: rgba(21, 33, 86, 0.55);
+  --gemini-gradient: linear-gradient(103deg, #9ed4ff 0%, #3ea3ff 28%, #2e4695 58%, #3ea3ff 80%, #9ed4ff 100%);
 }
 
 /* ── Deep-black canvas with aurora glows ─────────────────────────── */
 .dark body {
   background-color: #060609;
   background-image:
-    radial-gradient(60rem 40rem at 82% -12%, rgba(138, 180, 248, 0.09), transparent 60%),
-    radial-gradient(50rem 36rem at -12% 18%, rgba(197, 138, 249, 0.07), transparent 60%),
-    radial-gradient(46rem 46rem at 50% 118%, rgba(66, 133, 244, 0.06), transparent 65%);
+    radial-gradient(60rem 40rem at 82% -12%, rgba(62, 163, 255, 0.10), transparent 60%),
+    radial-gradient(50rem 36rem at -12% 18%, rgba(46, 70, 149, 0.16), transparent 60%),
+    radial-gradient(46rem 46rem at 50% 118%, rgba(21, 33, 86, 0.22), transparent 65%);
   background-attachment: fixed;
   color-scheme: dark;
+}
+
+/* ── Navbar logo ───────────────────────────────────────────────────── */
+.navbar-brand svg {
+  height: 1.55em;
+  width: auto;
+  margin-right: 0.45em;
+  vertical-align: -0.28em;
 }
 
 /* ── Header: translucent, blurred, hairline glow border ──────────── */
@@ -26,8 +34,8 @@
   background: rgba(6, 6, 9, 0.72) !important;
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
-  border-bottom: 1px solid rgba(138, 180, 248, 0.12);
-  box-shadow: 0 1px 24px rgba(138, 180, 248, 0.06);
+  border-bottom: 1px solid rgba(62, 163, 255, 0.12);
+  box-shadow: 0 1px 24px rgba(62, 163, 255, 0.06);
 }
 
 /* ── Nav links: soft glow on hover/active ────────────────────────── */
@@ -43,7 +51,7 @@
 .dark h1,
 .dark h2,
 .dark h3 {
-  text-shadow: 0 0 32px rgba(138, 180, 248, 0.10);
+  text-shadow: 0 0 32px rgba(62, 163, 255, 0.10);
 }
 
 /* ── Hero: gradient-clipped title + halo behind it ───────────────── */
@@ -65,8 +73,8 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(38rem 22rem at 50% 15%, rgba(138, 180, 248, 0.14), transparent 65%),
-    radial-gradient(30rem 18rem at 68% 30%, rgba(197, 138, 249, 0.10), transparent 60%);
+    radial-gradient(38rem 22rem at 50% 15%, rgba(62, 163, 255, 0.16), transparent 65%),
+    radial-gradient(30rem 18rem at 68% 30%, rgba(46, 70, 149, 0.22), transparent 60%);
 }
 @keyframes gemini-sheen {
   from { background-position: 0% center; }
@@ -77,7 +85,7 @@
 a[class*="from-primary"],
 a[class*="bg-primary"],
 button[class*="bg-primary"] {
-  box-shadow: 0 0 18px rgba(138, 180, 248, 0.30);
+  box-shadow: 0 0 18px rgba(62, 163, 255, 0.30);
   transition: box-shadow 0.3s ease, transform 0.2s ease, filter 0.3s ease;
 }
 a[class*="from-primary"]:hover,
@@ -85,14 +93,14 @@ a[class*="bg-primary"]:hover,
 button[class*="bg-primary"]:hover {
   box-shadow:
     0 0 28px var(--glow-blue),
-    0 0 72px rgba(138, 180, 248, 0.22);
+    0 0 72px rgba(62, 163, 255, 0.22);
   filter: brightness(1.08);
 }
 
 /* ── Outlined / secondary buttons: hairline glow on hover ────────── */
 .dark a[class*="border"][class*="rounded-full"]:hover {
-  border-color: rgba(138, 180, 248, 0.45) !important;
-  box-shadow: 0 0 20px rgba(138, 180, 248, 0.15);
+  border-color: rgba(62, 163, 255, 0.45) !important;
+  box-shadow: 0 0 20px rgba(62, 163, 255, 0.15);
 }
 
 /* ── Content cards: elevated black glass + hover glow ────────────── */
@@ -105,10 +113,10 @@ button[class*="bg-primary"]:hover {
 }
 .dark article[class*="rounded"]:hover,
 .dark a[class*="rounded-2xl"]:hover {
-  border-color: rgba(138, 180, 248, 0.28);
+  border-color: rgba(62, 163, 255, 0.28);
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.6),
-    0 0 24px rgba(138, 180, 248, 0.12);
+    0 0 24px rgba(62, 163, 255, 0.12);
   transform: translateY(-2px);
 }
 
@@ -125,7 +133,7 @@ article a {
   border-image: var(--gemini-gradient) 1;
   background: linear-gradient(#0b0b10, #0b0b10) padding-box,
               var(--gemini-gradient) border-box;
-  box-shadow: 0 0 24px rgba(138, 180, 248, 0.06);
+  box-shadow: 0 0 24px rgba(62, 163, 255, 0.06);
 }
 
 /* ── Tag pills ───────────────────────────────────────────────────── */
@@ -133,24 +141,24 @@ article a {
   transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .dark a[href^="/tags/"]:hover {
-  border-color: rgba(197, 138, 249, 0.4);
-  box-shadow: 0 0 16px rgba(197, 138, 249, 0.2);
+  border-color: rgba(62, 163, 255, 0.45);
+  box-shadow: 0 0 16px rgba(62, 163, 255, 0.22);
 }
 
 /* ── Code blocks: subtle glow frame ──────────────────────────────── */
 .dark pre {
-  border: 1px solid rgba(138, 180, 248, 0.10);
-  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(138, 180, 248, 0.05);
+  border: 1px solid rgba(62, 163, 255, 0.10);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(62, 163, 255, 0.05);
 }
 
 /* ── Featured images: soft glow halo ─────────────────────────────── */
 .dark figure img {
-  box-shadow: 0 0 40px rgba(138, 180, 248, 0.08);
+  box-shadow: 0 0 40px rgba(62, 163, 255, 0.08);
 }
 
 /* ── Selection + scrollbar ───────────────────────────────────────── */
 ::selection {
-  background: rgba(138, 180, 248, 0.35);
+  background: rgba(62, 163, 255, 0.35);
   color: #fff;
 }
 .dark ::-webkit-scrollbar {
@@ -174,15 +182,15 @@ article a {
   border-top: 1px solid transparent;
   background:
     linear-gradient(#08080c, #08080c) padding-box,
-    linear-gradient(90deg, transparent, rgba(138, 180, 248, 0.35), rgba(197, 138, 249, 0.25), transparent) border-box;
+    linear-gradient(90deg, transparent, rgba(62, 163, 255, 0.4), rgba(46, 70, 149, 0.6), transparent) border-box;
 }
 
 /* ── Light mode: keep it crisp, just add gentle glow hints ───────── */
 a[class*="from-primary"] {
-  box-shadow: 0 4px 16px rgba(26, 115, 232, 0.25);
+  box-shadow: 0 4px 16px rgba(46, 70, 149, 0.35);
 }
 a[class*="from-primary"]:hover {
-  box-shadow: 0 6px 24px rgba(26, 115, 232, 0.35);
+  box-shadow: 0 6px 24px rgba(46, 70, 149, 0.5);
 }
 
 @media (prefers-reduced-motion: reduce) {

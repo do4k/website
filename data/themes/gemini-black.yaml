@@ -13,8 +13,8 @@ hugoblox:
 
   light:
     colors:
-      primary: "#1a73e8" # Google blue
-      secondary: "#9334e6" # Gemini violet
+      primary: "#2e4695" # logo deep blue
+      secondary: "#152156" # logo midnight
     surfaces:
       background: "#ffffff"
       foreground: "#1f1f1f"
@@ -27,8 +27,8 @@ hugoblox:
 
   dark:
     colors:
-      primary: "#8ab4f8" # luminous Gemini blue on black
-      secondary: "#c58af9" # Gemini violet-pink
+      primary: "#3ea3ff" # logo azure — glows against the black
+      secondary: "#2e4695" # logo deep blue
     surfaces:
       background: "#060609" # deep, inky black
       foreground: "#e8eaed"
