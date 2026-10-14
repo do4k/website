@@ -7,12 +7,9 @@ on:
   # Standalone trigger for PR validation
   pull_request:
     branches: ['main']
-  # Reusable workflow trigger - called by deploy.yml
-  workflow_call:
-    outputs:
-      artifact-id:
-        description: 'The ID of the uploaded artifact'
-        value: ${{ jobs.build.outputs.artifact-id }}
+  # Pushes to main are built by Cloudflare Pages; keep CI validation here too
+  push:
+    branches: ['main']
   # Allow manual trigger for testing
   workflow_dispatch:
 
@@ -122,17 +119,13 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-hugo-resources-
 
-    - name: Setup Pages
-      id: pages
-      uses: actions/configure-pages@v5
-
     - name: Build with Hugo
       env:
         HUGO_ENVIRONMENT: production
         HUGO_BLOX_LICENSE: ${{ secrets.HUGO_BLOX_LICENSE }}
       run: |
         echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-        hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        hugo --minify
 
     - name: Generate Pagefind search index (if applicable)
       run: |
@@ -141,8 +134,9 @@ jobs:
           pnpm run pagefind || npx pagefind --site "public"
         fi
 
-    - name: Upload artifact
+    - name: Upload site artifact
       id: upload
-      uses: actions/upload-pages-artifact@v4
+      uses: actions/upload-artifact@v4
       with:
+        name: hugo-site
         path: ./public
