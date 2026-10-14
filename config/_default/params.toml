@@ -51,7 +51,7 @@ card = "summary_large_image"
 
 [colorScheme]
 toggle = true
-default = "auto"
+default = "dark"
 
 [cookies]
 enabled = false

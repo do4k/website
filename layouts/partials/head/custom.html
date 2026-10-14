@@ -1,0 +1,5 @@
+{{/* Load site CSS overrides from assets/css/extended/*.css */}}
+{{ range resources.Match "css/extended/*.css" }}
+  {{ $styles := . | minify | fingerprint "sha256" }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ end }}
