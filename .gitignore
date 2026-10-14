@@ -1,2 +1,6 @@
 public/
 resources/.DS_Store
+resources/
+hugo_stats.json
+node_modules/
+.env

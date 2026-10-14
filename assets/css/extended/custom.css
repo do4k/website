@@ -153,6 +153,22 @@ html[data-scheme="dark"] .article-page .article-details {
   border: 1px solid rgba(62, 163, 255, 0.08);
 }
 
+/* post cards: blue glow on hover */
+html[data-scheme="dark"] .article-list > article {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+html[data-scheme="dark"] .article-list > article:hover {
+  border-color: rgba(62, 163, 255, 0.45);
+  box-shadow:
+    0 0 24px rgba(62, 163, 255, 0.18),
+    0 0 64px rgba(62, 163, 255, 0.08),
+    0 10px 32px rgba(0, 0, 0, 0.55);
+}
+html[data-scheme="dark"] .article-list > article:hover .article-title a {
+  color: #7cc0ff;
+  text-shadow: 0 0 16px rgba(62, 163, 255, 0.5);
+}
+
 /* selection + scrollbar */
 html[data-scheme="dark"] ::selection {
   background: rgba(62, 163, 255, 0.35);
