@@ -59,3 +59,117 @@ a:hover {
 .post-content a {
   box-shadow: 0 0px;
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Deep-black dark mode with Gemini-style blue glow
+   (palette name: logo blues #3ea3ff / #2e4695 / #152156)
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root[data-scheme="dark"] {
+  /* surfaces */
+  --body-background: #050507;
+  --card-background: #0d0e14;
+  --card-background-selected: #14151f;
+  --card-separator-color: rgba(62, 163, 255, 0.14);
+  --blockquote-background-color: #0a0c12;
+  --code-background-color: #12141d;
+  --pre-background-color: #0b0d14;
+  --pre-text-color: #f8fafc;
+  --table-border-color: rgba(255, 255, 255, 0.1);
+  --tr-even-background-color: #0e1017;
+  --kbd-border-color: #2a2d3a;
+  --article-tile-overlay-bg: rgba(0, 0, 0, 0.55);
+
+  /* text */
+  --body-text-color: rgba(232, 234, 237, 0.72);
+  --card-text-color-main: #eef1f5;
+  --card-text-color-secondary: rgba(232, 234, 237, 0.62);
+  --card-text-color-tertiary: rgba(232, 234, 237, 0.42);
+
+  /* azure accents: links, tags, buttons */
+  --accent-color: #3ea3ff;
+  --accent-color-darker: #7cc0ff;
+  --accent-color-text: #04060c;
+
+  /* glowing link underline highlight */
+  --link-background-color: 62, 163, 255;
+  --link-background-opacity: 0.25;
+  --link-background-opacity-hover: 0.5;
+
+  /* elevation */
+  --shadow-l1: 0px 4px 12px rgba(0, 0, 0, 0.55), 0px 0px 1px rgba(62, 163, 255, 0.1);
+  --shadow-l2: 0px 12px 32px rgba(0, 0, 0, 0.6), 0px 2px 8px rgba(62, 163, 255, 0.08);
+}
+
+/* aurora background */
+html[data-scheme="dark"] body {
+  background-image:
+    radial-gradient(55rem 38rem at 85% -10%, rgba(62, 163, 255, 0.1), transparent 60%),
+    radial-gradient(48rem 34rem at -10% 15%, rgba(46, 70, 149, 0.18), transparent 60%),
+    radial-gradient(42rem 42rem at 50% 115%, rgba(21, 33, 86, 0.25), transparent 65%);
+  background-attachment: fixed;
+}
+
+/* links glow on hover */
+html[data-scheme="dark"] a {
+  transition: text-shadow 0.25s ease, color 0.25s ease;
+}
+html[data-scheme="dark"] a:hover {
+  text-shadow: 0 0 14px rgba(62, 163, 255, 0.6);
+}
+
+/* glowing underline for in-content links */
+html[data-scheme="dark"] .post-content a {
+  box-shadow: 0 -2px 0 rgba(62, 163, 255, 0.35) inset;
+}
+html[data-scheme="dark"] .post-content a:hover {
+  box-shadow:
+    0 -2px 0 rgba(124, 192, 255, 0.85) inset,
+    0 0 18px rgba(62, 163, 255, 0.25);
+}
+
+/* tag pills + buttons: soft blue glow, brighter on hover */
+html[data-scheme="dark"] .article-tags a,
+html[data-scheme="dark"] .tagCloud-tags a,
+html[data-scheme="dark"] .btn-primary,
+html[data-scheme="dark"] .paginator a {
+  box-shadow: 0 0 16px rgba(62, 163, 255, 0.25);
+  transition: box-shadow 0.3s ease, filter 0.3s ease;
+}
+html[data-scheme="dark"] .article-tags a:hover,
+html[data-scheme="dark"] .tagCloud-tags a:hover,
+html[data-scheme="dark"] .btn-primary:hover,
+html[data-scheme="dark"] .paginator a:hover {
+  box-shadow:
+    0 0 24px rgba(62, 163, 255, 0.5),
+    0 0 60px rgba(62, 163, 255, 0.18);
+  filter: brightness(1.08);
+}
+
+/* cards: hairline blue edge */
+html[data-scheme="dark"] .article-list > article,
+html[data-scheme="dark"] .widget,
+html[data-scheme="dark"] .article-page .article-details {
+  border: 1px solid rgba(62, 163, 255, 0.08);
+}
+
+/* selection + scrollbar */
+html[data-scheme="dark"] ::selection {
+  background: rgba(62, 163, 255, 0.35);
+  color: #fff;
+}
+html[data-scheme="dark"] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+html[data-scheme="dark"] ::-webkit-scrollbar-track {
+  background: #050507;
+}
+html[data-scheme="dark"] ::-webkit-scrollbar-thumb {
+  background: #1c1f2a;
+  border-radius: 8px;
+  border: 2px solid #050507;
+}
+html[data-scheme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #2a3050;
+}
