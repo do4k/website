@@ -125,9 +125,9 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
     # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} {name}. This work is licensed under {license}"
+    notice: "© {year} {name}."
     license:
-      type: cc # cc | custom
+      type: none # cc | custom | none — none hides the license label and CC icon banner
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
