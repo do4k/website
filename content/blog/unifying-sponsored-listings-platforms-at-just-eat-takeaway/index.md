@@ -4,7 +4,8 @@ date: 2025-10-08
 draft: false
 tags: ["Architecture", ".NET", "C#", "System Design", "Microservices", "AWS", "Migration"]
 categories: ["Architecture", "Engineering"]
-image: "cover.jpg"
+image:
+  filename: "cover.jpg"
 description: "How we retired legacy PHP and CPC platforms to build Unified TopRank: a scalable, CPO-driven sponsored listings engine built with C# and .NET 10 on AWS."
 ---
 

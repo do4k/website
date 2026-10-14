@@ -1,0 +1,192 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Gemini Black — deep-black theme with glowing accents (danoak.dev)
+   Layered on top of the HugoBlox Kit design tokens.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --glow-blue: rgba(138, 180, 248, 0.45);
+  --glow-blue-soft: rgba(138, 180, 248, 0.18);
+  --glow-violet: rgba(197, 138, 249, 0.35);
+  --gemini-gradient: linear-gradient(103deg, #8ab4f8 0%, #a8c7fa 30%, #c58af9 62%, #f0a6ca 85%, #f6c26b 100%);
+}
+
+/* ── Deep-black canvas with aurora glows ─────────────────────────── */
+.dark body {
+  background-color: #060609;
+  background-image:
+    radial-gradient(60rem 40rem at 82% -12%, rgba(138, 180, 248, 0.09), transparent 60%),
+    radial-gradient(50rem 36rem at -12% 18%, rgba(197, 138, 249, 0.07), transparent 60%),
+    radial-gradient(46rem 46rem at 50% 118%, rgba(66, 133, 244, 0.06), transparent 65%);
+  background-attachment: fixed;
+  color-scheme: dark;
+}
+
+/* ── Header: translucent, blurred, hairline glow border ──────────── */
+.dark #site-header.header {
+  background: rgba(6, 6, 9, 0.72) !important;
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid rgba(138, 180, 248, 0.12);
+  box-shadow: 0 1px 24px rgba(138, 180, 248, 0.06);
+}
+
+/* ── Nav links: soft glow on hover/active ────────────────────────── */
+.dark .nav-link {
+  transition: text-shadow 0.25s ease, color 0.25s ease;
+}
+.dark .nav-link:hover,
+.dark .nav-link[aria-current="page"] {
+  text-shadow: 0 0 12px var(--glow-blue);
+}
+
+/* ── Headings: faint luminance ───────────────────────────────────── */
+.dark h1,
+.dark h2,
+.dark h3 {
+  text-shadow: 0 0 32px rgba(138, 180, 248, 0.10);
+}
+
+/* ── Hero: gradient-clipped title + halo behind it ───────────────── */
+.hb-hero {
+  position: relative;
+}
+.hb-hero h1 {
+  background: var(--gemini-gradient);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gemini-sheen 6s ease-in-out infinite alternate;
+}
+.hb-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(38rem 22rem at 50% 15%, rgba(138, 180, 248, 0.14), transparent 65%),
+    radial-gradient(30rem 18rem at 68% 30%, rgba(197, 138, 249, 0.10), transparent 60%);
+}
+@keyframes gemini-sheen {
+  from { background-position: 0% center; }
+  to   { background-position: 100% center; }
+}
+
+/* ── Buttons: glowing gradient (Gemini "Ask Gemini" style) ───────── */
+a[class*="from-primary"],
+a[class*="bg-primary"],
+button[class*="bg-primary"] {
+  box-shadow: 0 0 18px rgba(138, 180, 248, 0.30);
+  transition: box-shadow 0.3s ease, transform 0.2s ease, filter 0.3s ease;
+}
+a[class*="from-primary"]:hover,
+a[class*="bg-primary"]:hover,
+button[class*="bg-primary"]:hover {
+  box-shadow:
+    0 0 28px var(--glow-blue),
+    0 0 72px rgba(138, 180, 248, 0.22);
+  filter: brightness(1.08);
+}
+
+/* ── Outlined / secondary buttons: hairline glow on hover ────────── */
+.dark a[class*="border"][class*="rounded-full"]:hover {
+  border-color: rgba(138, 180, 248, 0.45) !important;
+  box-shadow: 0 0 20px rgba(138, 180, 248, 0.15);
+}
+
+/* ── Content cards: elevated black glass + hover glow ────────────── */
+.dark article[class*="rounded"],
+.dark a[class*="rounded-2xl"] {
+  background: #101015;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
+}
+.dark article[class*="rounded"]:hover,
+.dark a[class*="rounded-2xl"]:hover {
+  border-color: rgba(138, 180, 248, 0.28);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 0 24px rgba(138, 180, 248, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ── Prose: glowing links, aurora blockquotes ────────────────────── */
+.dark .prose a,
+article a {
+  transition: text-shadow 0.25s ease;
+}
+.dark .prose a:hover {
+  text-shadow: 0 0 10px var(--glow-blue);
+}
+.dark blockquote {
+  border-left: 2px solid transparent;
+  border-image: var(--gemini-gradient) 1;
+  background: linear-gradient(#0b0b10, #0b0b10) padding-box,
+              var(--gemini-gradient) border-box;
+  box-shadow: 0 0 24px rgba(138, 180, 248, 0.06);
+}
+
+/* ── Tag pills ───────────────────────────────────────────────────── */
+.dark a[href^="/tags/"] {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.dark a[href^="/tags/"]:hover {
+  border-color: rgba(197, 138, 249, 0.4);
+  box-shadow: 0 0 16px rgba(197, 138, 249, 0.2);
+}
+
+/* ── Code blocks: subtle glow frame ──────────────────────────────── */
+.dark pre {
+  border: 1px solid rgba(138, 180, 248, 0.10);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(138, 180, 248, 0.05);
+}
+
+/* ── Featured images: soft glow halo ─────────────────────────────── */
+.dark figure img {
+  box-shadow: 0 0 40px rgba(138, 180, 248, 0.08);
+}
+
+/* ── Selection + scrollbar ───────────────────────────────────────── */
+::selection {
+  background: rgba(138, 180, 248, 0.35);
+  color: #fff;
+}
+.dark ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #060609;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #23232c;
+  border-radius: 8px;
+  border: 2px solid #060609;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3a3a48;
+}
+
+/* ── Footer: gradient hairline divider ───────────────────────────── */
+.dark footer {
+  border-top: 1px solid transparent;
+  background:
+    linear-gradient(#08080c, #08080c) padding-box,
+    linear-gradient(90deg, transparent, rgba(138, 180, 248, 0.35), rgba(197, 138, 249, 0.25), transparent) border-box;
+}
+
+/* ── Light mode: keep it crisp, just add gentle glow hints ───────── */
+a[class*="from-primary"] {
+  box-shadow: 0 4px 16px rgba(26, 115, 232, 0.25);
+}
+a[class*="from-primary"]:hover {
+  box-shadow: 0 6px 24px rgba(26, 115, 232, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hb-hero h1 {
+    animation: none;
+  }
+}

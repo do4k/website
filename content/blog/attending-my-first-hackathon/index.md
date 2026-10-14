@@ -5,7 +5,8 @@ author: "Dan Oak"
 description: "Attending my first Hackathon"
 draft: false
 
-image: "fig6-trophy.webp"
+image:
+  filename: "fig6-trophy.webp"
 ---
 
 # Intro

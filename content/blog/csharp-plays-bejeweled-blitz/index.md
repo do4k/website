@@ -5,7 +5,8 @@ author: "Dan Oak"
 description: "How to use C# to play Bejeweled Blitz"
 draft: false
 
-image: "grid-1.png"
+image:
+  filename: "grid-1.png"
 ---
 
 {{< youtube LyR10G9UCzM >}}

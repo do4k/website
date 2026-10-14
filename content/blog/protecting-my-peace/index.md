@@ -4,7 +4,8 @@ date: 2026-01-15
 draft: false
 tags: ["Software Engineering", "Mental Health", "Productivity", "Work Life Balance"]
 categories: ["Career", "Dev Log"]
-image: "cover.png"
+image:
+  filename: "cover.png"
 ---
 
 In software engineering, there is often a tension between the reality of discovery and the rigidity of a roadmap. We are frequently handed a destination and an arrival time before we’ve even had a chance to check the engine.

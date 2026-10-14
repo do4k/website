@@ -1,0 +1,40 @@
+# HugoBlox Theme Pack — "Gemini Black"
+# Deep-black dark theme with glowing blue/violet accents (Gemini-inspired)
+
+hugoblox:
+  meta:
+    format: "hugoblox-theme@1"
+    name: "Gemini Black"
+    vendor: "danoak"
+    version: "1.0.0"
+    license: "MIT"
+
+  type: "dual"
+
+  light:
+    colors:
+      primary: "#1a73e8" # Google blue
+      secondary: "#9334e6" # Gemini violet
+    surfaces:
+      background: "#ffffff"
+      foreground: "#1f1f1f"
+      header:
+        background: "#f8f9fa"
+        foreground: "#1f1f1f"
+      footer:
+        background: "#f1f3f4"
+        foreground: "#202124"
+
+  dark:
+    colors:
+      primary: "#8ab4f8" # luminous Gemini blue on black
+      secondary: "#c58af9" # Gemini violet-pink
+    surfaces:
+      background: "#060609" # deep, inky black
+      foreground: "#e8eaed"
+      header:
+        background: "#0a0a0f"
+        foreground: "#e8eaed"
+      footer:
+        background: "#08080c"
+        foreground: "#9aa0a6"

@@ -1,0 +1,21 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Dan Oak
+status:
+  icon: "☕️"
+role: Software Engineer
+bio: Software engineer writing about AI coding agents, .NET, event-driven systems,
+  and the craft of shipping real products.
+affiliations: []
+links:
+  - icon: brands/github
+    url: https://github.com/do4k
+  - icon: brands/bluesky
+    url: https://bsky.app/profile/danoak.dev
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/danoak/
+  - icon: rss
+    url: ./blog/index.xml
+    label: Subscribe via RSS
